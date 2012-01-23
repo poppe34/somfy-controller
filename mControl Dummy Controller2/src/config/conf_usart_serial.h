@@ -1,0 +1,84 @@
+/*! \file *********************************************************************
+ *
+ * \brief USART Serial configuration
+ *
+ * Copyright (C) 2011 Atmel Corporation. All rights reserved.
+ *
+ * \page License
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ * this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ * this list of conditions and the following disclaimer in the documentation
+ * and/or other materials provided with the distribution.
+ *
+ * 3. The name of Atmel may not be used to endorse or promote products derived
+ * from this software without specific prior written permission.
+ *
+ * 4. This software may only be redistributed and used in connection with an
+ * Atmel AVR product.
+ *
+ * THIS SOFTWARE IS PROVIDED BY ATMEL "AS IS" AND ANY EXPRESS OR IMPLIED
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT ARE
+ * EXPRESSLY AND SPECIFICALLY DISCLAIMED. IN NO EVENT SHALL ATMEL BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+ * DAMAGE.
+ */
+ 
+#ifndef CONF_USART_SERIAL_H_INCLUDED
+#define CONF_USART_SERIAL_H_INCLUDED
+
+#define SOMFY_DEVICE_PORT						&USARTC0
+#define SOMFY_DEVICE_DEFAULT_BAUDRATE			4800
+#define SOMFY_DEVICE_DEFAULT_STOPBIT			true
+#define SOMFY_DEVICE_DEFAULT_PAIRITY			USART_PMODE_ODD_gc  
+#define SOMFY_DEVICE_DEFAULT_CHSIZE				USART_CHSIZE_8BIT_gc
+#define SOMFY_DEVICE_RX_INTERRUPT				USART_RXCINTLVL0_bm
+#define SOMFY_DEVICE_TX_INTERRUPT				USART_TXCINTLVL0_bm
+#define SOMFY_DEVICE_INTERRUPT_RX_VECT			USARTC0_RXC_vect
+#define SOMFY_DEVICE_INTERRUPT_TX_VECT			USARTC0_TXC_vect
+#define SOMFY_DEVICE_RS485_ENABLE_PIN			SOMFY_DEVICE_RS485_PIN
+
+#define SOMFY_DEBUG_PORT						&USARTC1
+#define SOMFY_DEBUG_DEFAULT_BAUDRATE			115200
+#define SOMFY_DEBUG_DEFAULT_STOPBIT				false
+#define SOMFY_DEBUG_DEFAULT_PAIRITY				USART_PMODE_DISABLED_gc  
+#define SOMFY_DEBUG_DEFAULT_CHSIZE				USART_CHSIZE_8BIT_gc
+#define SOMFY_DEBUG_RX_INTERRUPT				USART_RXCINTLVL0_bm
+#define SOMFY_DEBUG_TX_INTERRUPT				USART_TXCINTLVL0_bm
+#define SOMFY_DEBUG_INTERRUPT_RX_VECT			USARTC1_RXC_vect
+#define SOMFY_DEBUG_INTERRUPT_TX_VECT			USARTC1_TXC_vect
+
+
+#define PC_INTERFACE_SERIAL_PORT				&USARTD0
+#define PC_INTERFACE_SERIAL_BAUDRATE			9600
+#define PC_INTERFACE_SERIAL_CHARLEN				USART_CHSIZE_8BIT_gc
+#define PC_INTERFACE_SERIAL_PAIRITY				USART_PMODE_DISABLED_gc
+#define PC_INTERFACE_SERIAL_STOPBIT				false
+#define PC_INTERFACE_SERIAL_RX_INTERRUPT		USART_RXCINTLVL0_bm
+#define PC_INTERFACE_SERIAL_TX_INTERRUPT		USART_TXCINTLVL0_bm
+#define PC_INTERFACE_SERIAL_INTERRUPT_RX_VECT	USARTD0_RXC_vect
+#define PC_INTERFACE_SERIAL_INTERRUPT_TX_VECT	USARTD0_TXC_vect
+
+#define TEMP_SERIAL_PORT						&USARTD1
+#define TEMP_SERIAL_BAUDRATE					4800
+#define TEMP_SERIAL_CHARLEN						USART_CHSIZE_8BIT_gc
+#define TEMP_SERIAL_PAIRITY						USART_PMODE_ODD_gc
+#define TEMP_SERIAL_STOPBIT						false
+#define TEMP_SERIAL_RX_INTERRUPT				USART_RXCINTLVL0_bm
+#define TEMP_SERIAL_TX_INTERRUPT				USART_TXCINTLVL0_bm
+#define TEMP_SERIAL_INTERRUPT_RX_VECT			USARTD1_RXC_vect
+#define TEMP_SERIAL_INTERRUPT_TX_VECT			USARTD1_TXC_vect
+		
+#define NUM_OF_USART_CHANNELS					4
+#endif /* CONF_USART_SERIAL_H_INCLUDED */
