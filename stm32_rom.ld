@@ -1,5 +1,5 @@
 /*
- * linker script for STM32F10x with GNU ld
+ * linker script for STM32F40x with GNU ld
  * bernard.xiong 2009-10-14
  */
 
@@ -10,7 +10,7 @@ MEMORY
     DATA (rw) : ORIGIN = 0x20000000, LENGTH =  64k /* 64K sram */
 }
 ENTRY(Reset_Handler)
-_system_stack_size = 0x100;
+_system_stack_size = 0x800;
 
 SECTIONS
 {
