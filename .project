@@ -5,13 +5,7 @@
 	<projects>
 	</projects>
 	<buildSpec>
-		<buildCommand>
-			<name>ch.hsr.ifs.sconsolidator.Builder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>ch.hsr.ifs.sconsolidator.NonCppNature</nature>
 	</natures>
 </projectDescription>
